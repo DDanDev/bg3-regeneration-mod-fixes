@@ -22,6 +22,13 @@
                             }
                         },
                         {
+                            "Id": "DebugMode",
+                            "Name": "Enable Debug On Console",
+                            "Type": "checkbox",
+                            "Default": false,
+                            "Description": "Enable Debug On Console"
+                        },
+                        {
                             "Id": "OutofCombatRegen",
                             "Name": "Out of Combat Regeneration",
                             "Type": "checkbox",
@@ -31,7 +38,7 @@
                                 "NameHandle": "hadd8e8a3d8704755a5b6e30267995002g414",
                                 "DescriptionHandle": "h0f30154b1b92453d8d3d57147985108a35eb"
                             },
-                           "VisibleIf": {
+                            "VisibleIf": {
                                 "Conditions": [{
                                     "SettingId": "RegenerationButton",
                                     "ExpectedValue": "true",
@@ -812,6 +819,28 @@
                             "Type": "slider_int",
                             "Default": 5,
                             "Tooltip": "Turns required to regenerate a War Priest Action Point.",
+                            "Options": {
+                                "Min": 0,
+                                "Max": 1200
+                            }
+                        },
+                        {
+                            "Id": "Interrupt_LuckOfTheFarRealms_Charge",
+                            "Name": "Ilithid Luck of The Far Realms Reaction Charge",
+                            "Type": "slider_int",
+                            "Default": 30,
+                            "Tooltip": "Turns required to reenable Luck Of The Far Realms reaction.",
+                            "Options": {
+                                "Min": 0,
+                                "Max": 1200
+                            }
+                        },
+                        {
+                            "Id": "Interrupt_EntropicWard_Charge",
+                            "Name": "Warlock's Great Old One's Entropic Ward Reaction Charge",
+                            "Type": "slider_int",
+                            "Default": 30,
+                            "Tooltip": "Turns required to reenable Entropic Ward reaction.",
                             "Options": {
                                 "Min": 0,
                                 "Max": 1200
