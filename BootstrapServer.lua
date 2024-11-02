@@ -62,20 +62,32 @@ local function tableToString(tableIn)
     return out
 end
 
+local function resetShortRestCooldowns(_character, _characterId)
+    local characterId = _characterId or GetHostCharacter()
+    local character = _character or "Currently controled character " .. characterId
+    Osi.ApplyStatus(characterId, "REGENSHORT", 100, 0)
+    if Vars["DebugMode"] == true then
+        _P("+++Regenerated " .. character .. " : SHORT rest cooldowns")
+    end
+end
+Ext.RegisterConsoleCommand("resetShortRestCooldowns", resetShortRestCooldowns)
+local function resetLongRestCooldowns(_character, _characterId)
+    local characterId = _characterId or GetHostCharacter()
+    local character = _character or "Currently controled character " .. characterId
+    Osi.ApplyStatus(characterId, "REGENLONG", 100, 0)
+    if Vars["DebugMode"] == true then
+        _P("+++Regenerated " .. character .. " : LONG rest cooldowns")
+    end
+end
+Ext.RegisterConsoleCommand("resetLongRestCooldowns", resetLongRestCooldowns)
 local function ApplyRestStatuses(character, characterId)
     if Vars["ShortRest"] ~= 0 and TurnCounter[character]["ShortRest"] >= tonumber(Vars["ShortRest"]) then
-        Osi.ApplyStatus(characterId, "REGENSHORT", 100, 0)
+        resetShortRestCooldowns(character, characterId)
         TurnCounter[character]["ShortRest"] = 0
-        if Vars["DebugMode"] == true then
-            _P("+++Regenerated " .. character .. " : SHORT rest cooldowns")
-        end
     end
     if Vars["LongRest"] ~= 0 and TurnCounter[character]["LongRest"] >= tonumber(Vars["LongRest"]) then
-        Osi.ApplyStatus(characterId, "REGENLONG", 100, 0) -- Apply REGENLONG status
+        resetLongRestCooldowns(character, characterId)
         TurnCounter[character]["LongRest"] = 0
-        if Vars["DebugMode"] == true then
-            _P("+++Regenerated " .. character .. " : LONG rest cooldowns")
-        end
     end
 end
 
