@@ -924,6 +924,39 @@
                                 "Min": 0,
                                 "Max": 1200
                             }
+                        },
+                        {
+                            "Id": "SpellSlotsLvl7",
+                            "Name": "Spell Slots Level 7",
+                            "Type": "slider_int",
+                            "Default": 21,
+                            "Tooltip": "Turns required to regenerate a level 7 spell slot.",
+                            "Options": {
+                                "Min": 0,
+                                "Max": 1200
+                            }
+                        },
+                        {
+                            "Id": "SpellSlotsLvl8",
+                            "Name": "Spell Slots Level 8",
+                            "Type": "slider_int",
+                            "Default": 24,
+                            "Tooltip": "Turns required to regenerate a level 8 spell slot.",
+                            "Options": {
+                                "Min": 0,
+                                "Max": 1200
+                            }
+                        },
+                        {
+                            "Id": "SpellSlotsLvl9",
+                            "Name": "Spell Slots Level 9",
+                            "Type": "slider_int",
+                            "Default": 30,
+                            "Tooltip": "Turns required to regenerate a level 9 spell slot.",
+                            "Options": {
+                                "Min": 0,
+                                "Max": 1200
+                            }
                         }
                     ]
                 }
@@ -1003,12 +1036,156 @@
                                 "Min": 0,
                                 "Max": 1200
                             }
+                        },
+                        {
+                            "Id": "WarlockSpellSlotsLvl7",
+                            "Name": "Warlock Spell Slots Level 7",
+                            "Type": "slider_int",
+                            "Default": 21,
+                            "Tooltip": "Turns required to regenerate a level 7 warlock spell slot.",
+                            "Options": {
+                                "Min": 0,
+                                "Max": 1200
+                            }
+                        },
+                        {
+                            "Id": "WarlockSpellSlotsLvl8",
+                            "Name": "Warlock Spell Slots Level 8",
+                            "Type": "slider_int",
+                            "Default": 24,
+                            "Tooltip": "Turns required to regenerate a level 8 warlock spell slot.",
+                            "Options": {
+                                "Min": 0,
+                                "Max": 1200
+                            }
+                        },
+                        {
+                            "Id": "WarlockSpellSlotsLvl9",
+                            "Name": "Warlock Spell Slots Level 9",
+                            "Type": "slider_int",
+                            "Default": 30,
+                            "Tooltip": "Turns required to regenerate a level 9 warlock spell slot.",
+                            "Options": {
+                                "Min": 0,
+                                "Max": 1200
+                            }
                         }
                     ]
                 }
             ]
         }
-        
+        ,
+        {
+            "TabId": "shadow_spell_slots_regeneration",
+            "TabName": "Shadow Spellslots",
+            "Sections": [
+                {
+                    "SectionId": "shadow_spell_slots",
+                    "SectionName": "Shadow Spell Slots Settings",
+                    "Settings": [
+                        {
+                            "Id": "ShadowSpellSlotsLvl1",
+                            "Name": "Shadow Spell Slots Level 1",
+                            "Type": "slider_int",
+                            "Default": 3,
+                            "Tooltip": "Turns required to regenerate a level 1 shadow spell slot.",
+                            "Options": {
+                                "Min": 0,
+                                "Max": 1200
+                            }
+                        },
+                        {
+                            "Id": "ShadowSpellSlotsLvl2",
+                            "Name": "Shadow Spell Slots Level 2",
+                            "Type": "slider_int",
+                            "Default": 6,
+                            "Tooltip": "Turns required to regenerate a level 2 shadow spell slot.",
+                            "Options": {
+                                "Min": 0,
+                                "Max": 1200
+                            }
+                        },
+                        {
+                            "Id": "ShadowSpellSlotsLvl3",
+                            "Name": "Shadow Spell Slots Level 3",
+                            "Type": "slider_int",
+                            "Default": 9,
+                            "Tooltip": "Turns required to regenerate a level 3 shadow spell slot.",
+                            "Options": {
+                                "Min": 0,
+                                "Max": 1200
+                            }
+                        },
+                        {
+                            "Id": "ShadowSpellSlotsLvl4",
+                            "Name": "Shadow Spell Slots Level 4",
+                            "Type": "slider_int",
+                            "Default": 12,
+                            "Tooltip": "Turns required to regenerate a level 4 shadow spell slot.",
+                            "Options": {
+                                "Min": 0,
+                                "Max": 1200
+                            }
+                        },
+                        {
+                            "Id": "ShadowSpellSlotsLvl5",
+                            "Name": "Shadow Spell Slots Level 5",
+                            "Type": "slider_int",
+                            "Default": 15,
+                            "Tooltip": "Turns required to regenerate a level 5 shadow spell slot.",
+                            "Options": {
+                                "Min": 0,
+                                "Max": 1200
+                            }
+                        },
+                        {
+                            "Id": "ShadowSpellSlotsLvl6",
+                            "Name": "Shadow Spell Slots Level 6",
+                            "Type": "slider_int",
+                            "Default": 18,
+                            "Tooltip": "Turns required to regenerate a level 6 shadow spell slot.",
+                            "Options": {
+                                "Min": 0,
+                                "Max": 1200
+                            }
+                        },
+                        {
+                            "Id": "ShadowSpellSlotsLvl7",
+                            "Name": "Shadow Spell Slots Level 7",
+                            "Type": "slider_int",
+                            "Default": 21,
+                            "Tooltip": "Turns required to regenerate a level 7 shadow spell slot.",
+                            "Options": {
+                                "Min": 0,
+                                "Max": 1200
+                            }
+                        },
+                        {
+                            "Id": "ShadowSpellSlotsLvl8",
+                            "Name": "Shadow Spell Slots Level 8",
+                            "Type": "slider_int",
+                            "Default": 24,
+                            "Tooltip": "Turns required to regenerate a level 8 shadow spell slot.",
+                            "Options": {
+                                "Min": 0,
+                                "Max": 1200
+                            }
+                        },
+                        {
+                            "Id": "ShadowSpellSlotsLvl9",
+                            "Name": "Shadow Spell Slots Level 9",
+                            "Type": "slider_int",
+                            "Default": 30,
+                            "Tooltip": "Turns required to regenerate a level 9 shadow spell slot.",
+                            "Options": {
+                                "Min": 0,
+                                "Max": 1200
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
     ]
 }
 

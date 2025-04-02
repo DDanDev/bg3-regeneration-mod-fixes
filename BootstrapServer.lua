@@ -100,7 +100,7 @@ local function inspectAllResources(character)
 
         if resourceName ~= "ActionPoint" and resourceName ~= "BonusActionPoint" and resourceName ~= "ReactionActionPoint" and resourceName ~= "Movement" and resourceName ~= "SneakAttack_Charge" then
             local out = ""
-            if not Vars[resourceName] and resourceName ~= "SpellSlot" and resourceName ~= "WarlockSpellSlot" then
+            if not Vars[resourceName] and resourceName ~= "SpellSlot" and resourceName ~= "WarlockSpellSlot" and resourceName ~= "ShadowSpellSlot" then
                 out = "MISSING in mod >>>>>>>> "
             end
 
@@ -147,7 +147,7 @@ local function giveResourceXToChar(_, resourceTarget, _character)
         return
     end
 
-    local resourceTgtBaseName = resourceTarget:match("(WarlockSpellSlot)") or resourceTarget:match("(SpellSlot)") or resourceTarget
+    local resourceTgtBaseName = resourceTarget:match("(ShadowSpellSlot)") or resourceTarget:match("(WarlockSpellSlot)") or resourceTarget:match("(SpellSlot)") or resourceTarget
     local lvl = resourceTarget:match("SpellSlotsLvl(.*)") or 1
 
     for UUID, resource in pairs(resources) do
@@ -178,7 +178,7 @@ local function CountATurn(character)
         for lvl, resourceData in pairs(resource) do
             if resourceData and resourceData.Amount then
                 local resourceNameComplete = resourceName
-                if resourceName == "SpellSlot" or resourceName == "WarlockSpellSlot" then
+                if resourceName == "SpellSlot" or resourceName == "WarlockSpellSlot" or resourceName == "ShadowSpellSlot" then
                     resourceNameComplete = resourceName .. "sLvl" .. lvl
                 end
                 count(character, resourceNameComplete, resourceData, entity)
@@ -295,12 +295,27 @@ local function OnSessionLoaded()
         SpellSlotsLvl4 = MCMGet("SpellSlotsLvl4"),
         SpellSlotsLvl5 = MCMGet("SpellSlotsLvl5"),
         SpellSlotsLvl6 = MCMGet("SpellSlotsLvl6"),
+        SpellSlotsLvl7 = MCMGet("SpellSlotsLvl7"),
+        SpellSlotsLvl8 = MCMGet("SpellSlotsLvl8"),
+        SpellSlotsLvl9 = MCMGet("SpellSlotsLvl9"),
         WarlockSpellSlotsLvl1 = MCMGet("WarlockSpellSlotsLvl1"),
         WarlockSpellSlotsLvl2 = MCMGet("WarlockSpellSlotsLvl2"),
         WarlockSpellSlotsLvl3 = MCMGet("WarlockSpellSlotsLvl3"),
         WarlockSpellSlotsLvl4 = MCMGet("WarlockSpellSlotsLvl4"),
         WarlockSpellSlotsLvl5 = MCMGet("WarlockSpellSlotsLvl5"),
         WarlockSpellSlotsLvl6 = MCMGet("WarlockSpellSlotsLvl6"),
+        WarlockSpellSlotsLvl7 = MCMGet("WarlockSpellSlotsLvl7"),
+        WarlockSpellSlotsLvl8 = MCMGet("WarlockSpellSlotsLvl8"),
+        WarlockSpellSlotsLvl9 = MCMGet("WarlockSpellSlotsLvl9"),
+        ShadowSpellSlotsLvl1 = MCMGet("ShadowSpellSlotsLvl1"),
+        ShadowSpellSlotsLvl2 = MCMGet("ShadowSpellSlotsLvl2"),
+        ShadowSpellSlotsLvl3 = MCMGet("ShadowSpellSlotsLvl3"),
+        ShadowSpellSlotsLvl4 = MCMGet("ShadowSpellSlotsLvl4"),
+        ShadowSpellSlotsLvl5 = MCMGet("ShadowSpellSlotsLvl5"),
+        ShadowSpellSlotsLvl6 = MCMGet("ShadowSpellSlotsLvl6"),
+        ShadowSpellSlotsLvl7 = MCMGet("ShadowSpellSlotsLvl7"),
+        ShadowSpellSlotsLvl8 = MCMGet("ShadowSpellSlotsLvl8"),
+        ShadowSpellSlotsLvl9 = MCMGet("ShadowSpellSlotsLvl9"),
         ArcaneShot = MCMGet("ArcaneShot"),
         PsiPoints = MCMGet("PsiPoints"),
         PsiLimit = MCMGet("PsiLimit"),
